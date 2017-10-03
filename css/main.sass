@@ -1,0 +1,119 @@
+$orange: #ff7f00
+$yellow: #ffbb00
+$gray: #444
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700')
+
+html
+	font-size: 62.5%
+	min-height: 100vh
+	background: linear-gradient(to bottom, $orange, $yellow) no-repeat (center / cover)
+	box-sizing: border-box
+	font-family: 'Open Sans'
+
+*
+	box-sizing: inherit
+
+body
+	margin: 0
+	font-size: 1.6rem
+
+.container
+	max-width: 460px
+	margin: auto
+
+.main-header
+	text-align: center
+	color: #ffffff
+	h1
+		font-size: 4.6rem
+	
+
+.search
+	.container
+		padding: 16px 40px 48px
+	
+	.search-result
+		padding: 24px 32px
+		margin-bottom: 24px
+		background-color: rgba(#fff, 0.9)
+	.result-header
+		position: relative
+	.header-content
+		font-weight: 700
+		font-size: 1.2rem
+		color: $gray
+	.close-result
+		position: absolute
+		top: 50%
+		right: 0
+		transform: translateY(-50%)
+		font-size: 1.8rem
+		color: $orange
+		cursor: pointer
+	.result-temperature
+		display: block
+		margin: 8px 0 16px
+		font-weight: 700
+		font-size: 3rem
+		color: $gray
+	.result-infos
+		color: $gray
+		font-size: 1.4em
+		.column
+			display: inline-block
+			vertical-align: top
+			max-width: 100%
+			width: 120px
+			font-size: 1.2rem
+		.value
+			font-weight: 700
+
+	.search-form
+		position: relative
+		input
+			width: 100%
+			height: 40px
+			padding: 0 48px 0 8px
+			border: none
+			&:focus
+				outline: none
+		button
+			position: absolute
+			top: 0
+			right: 0
+			width: 40px
+			height: 40px
+			border: none
+			background: url(../assets/img/search.png) no-repeat scroll center / 20px transparent
+			cursor: pointer
+			-webkit-appearance: none
+			-moz-appearance: none
+			&:focus
+				outline: none
+
+.capitals
+	.capitals-container
+		padding: 0 40px
+		border-top: 1px solid #ffffff
+	
+	h2
+		font-size: 3rem
+		color: #ffffff
+	
+	thead
+		th
+			text-align: left
+			font-weight: 400
+			font-size: 1.2rem
+			color: $gray
+	
+	tbody
+		td
+			min-width: 28px
+			font-size: 1.4rem
+			font-weight: 700
+			
+	.column
+		display: inline-block
+		width: 50%
