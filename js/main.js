@@ -404,6 +404,35 @@ $(document).ready(function(){
 
 	// Fim de i18n //
 
+	// Dicionario
+
+	var dicionario = {
+		"Partly Cloud": "Parcialmente Nublado",
+		"Showers": "Chuvas",
+		"Partly Cloudy": "Parcialmente Nublado",
+		"AM Showers": "Chuvas Matutinas",
+		"PM Showers": "Chuvas Vespertinas",
+		"PM Thunderstorms": "Tempestades Vespertinas",
+		"Scattered Thunderstorms": "Tempestades Espalhadas",
+		"Light Rain with Thunder": "Chuva leve com trovões",
+		"Thunderstorms": "Tempestades com Trovões",
+		"Heavy Rain": "Heavy Rain",
+		"Mostly Sunny": "Majoritariamente Ensolarado",
+		"Light Rain": "Chuva Leve",
+		"Fog": "Neblina",
+		"Fair": "Ameno",
+		"Sunny": "Ensolarado",
+		"AM Rain": "Chuvas Matutinas",
+		"PM Rain": "Chuvas Vespertinas",
+		"Mostly Cloudy": "Majoritariamente Nublado",
+		"Isolated Thunderstorms": "Tempestades Isoladas",
+		"Thundershowers": "Tempestades",
+		"Heavy Thunderstorms": "Tempestades Intensas",
+		"Clear": "Limpo",
+		"Rain": "Chuva",
+		"Cloudy": "Nublado"
+	};
+
 	// Pesquisa
 
 	$('.search-form button').on('click', function(event){
@@ -420,7 +449,7 @@ $(document).ready(function(){
 			estado = response.query.results.channel.location.region;
 			pais = response.query.results.channel.location.country;
 			temperaturaAtual = response.query.results.channel.item.condition.temp;
-			condicaoDoTempo = response.query.results.channel.item.condition.text;
+			condicaoDoTempo = dicionario[response.query.results.channel.item.condition.text];
 			// sensacao = response.query.results.channel.
 			velocidadeVento = response.query.results.channel.wind.speed;
 			umidade = response.query.results.channel.atmosphere.humidity;
